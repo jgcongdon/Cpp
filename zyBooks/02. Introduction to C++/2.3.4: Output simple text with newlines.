@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+
+   /* Your solution goes here  */
+   cout << "A1"; cout << endl; cout << "B2"; cout << endl;
+   /* Your solution goes here  */
+
+   return 0;
+}
