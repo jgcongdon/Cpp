@@ -8,10 +8,9 @@ int main() {
 
    /* Your solution goes here  */
    while (numInsects >= 1 && numInsects < 100) {
-      
-      numInsects = numInsects * 2;
       cout << numInsects << " ";
-   }
+      numInsects = numInsects * 2;
+         }
 
    cout << endl;
    /* Your solution ends here  */
