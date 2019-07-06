@@ -6,7 +6,7 @@ int main() {
 
    /* Your solution goes here  */
    hoursLeft = 3;
-   /* Your solution goes here  */
+   /* Your solution ends here  */
 
    cout << hoursLeft << " hours left." << endl;
 
