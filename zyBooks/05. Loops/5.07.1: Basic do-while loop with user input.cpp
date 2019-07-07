@@ -12,7 +12,7 @@ int main() {
    do {
       cout << printVal << " ";
       printVal = printVal + 1;
-   } while ( /* Your solution goes here  */ printVal <= countLimit /* Your solution goes here  */ );
+   } while ( /* Your solution goes here  */ printVal <= countLimit /* Your solution ends here  */ );
    cout << endl;
 
    return 0;
