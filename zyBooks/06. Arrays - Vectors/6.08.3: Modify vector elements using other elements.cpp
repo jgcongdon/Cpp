@@ -18,6 +18,7 @@ int main() {
          bonusScores.at(i) = bonusScores.at(i) + bonusScores.at(i+1);
       }
          }
+   /* Your solution ends here  */
 
    for (i = 0; i < SCORES_SIZE; ++i) {
       cout << bonusScores.at(i) << " ";
