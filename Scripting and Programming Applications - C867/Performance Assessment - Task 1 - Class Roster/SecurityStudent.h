@@ -12,7 +12,7 @@ class SecurityStudent : public Student
         string emailAddress,
         int age,
         int daysCourse[],
-        Degree degreetype
+        Degree degree
         );
         
     Degree getDegree();
