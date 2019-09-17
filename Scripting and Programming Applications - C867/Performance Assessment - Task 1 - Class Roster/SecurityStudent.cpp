@@ -1,29 +1,32 @@
 #include <iostream>
-#include "SecurityStudent.h"
-using std::cout;
+#include "securityStudent.h"
+#include <string>
+using namespace std;
 
-SecurityStudent::SecurityStudent():Student()
+Degree securityStudent::getDegree()
 {
-    dtype = SECURITY;
+	return degree;
 }
 
-SecurityStudent::SecurityStudent(string studentID, string firstName, string lastName, string emailAddress, int age, int daysCourse[], Degree degree):Student(studentID, firstName, lastName, emailAddress, age, daysCourse)
-{
-    dtype = SECURITY;
-}
-
-Degree SecurityStudent::getDegree()
-{
-    return SECURITY;
-}
-
-void SecurityStudent::print()
-{
-    this->Student::print();
-    cout << "SECURITY" << \n";
-}
-
-SecurityStudent::~SecurityStudent()
-{
-    Degree::~Degree();
-}
+//securityStudent::securityStudent() :Student()
+//{
+//
+//}
+//
+//securityStudent::securityStudent(
+//	string ID,
+//	string firstName,
+//	string lastName,
+//	string emailAddress,
+//	int age,
+//	int* daysCourse,
+//	Degree degreeType)
+//	: Student(ID, firstName, lastName, emailAddress, age, daysCourse)
+//{
+//	this->degree = degreeType;
+//}
+//
+//void securityStudent::print()
+//{
+//	this->Student::print();
+//}
