@@ -1,22 +1,32 @@
 #pragma once
 #include <string>
 #include "student.h"
-class SecurityStudent : public Student
+#include "degree.h"
+using namespace std;
+
+
+
+class securityStudent : public Student
 {
-    public:
-    SecurityStudent();
-    SecurityStudent(
-        string studentID,
-        string firstName,
-        string lastName,
-        string emailAddress,
-        int age,
-        int daysCourse[],
-        Degree degree
-        );
-        
-    Degree getDegree();
-    void print();
-    
-    ~SecurityStudent();
+private:
+	Degree degree = SECURITY;
+
+public:
+	using Student::Student;
+	Degree getDegree() override;
+	
+	/*securityStudent();
+	securityStudent(
+		string ID,
+		string firstName,
+		string lastName,
+		string emailAddress,
+		int age,
+		int* daysCourse,
+		Degree degreeType
+	    );
+
+	Degree getDegree();
+	void print();*/
+
 };
