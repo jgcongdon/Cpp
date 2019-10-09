@@ -42,4 +42,4 @@ public:
     void printByDegreeProgram(int degreeProgram);
     
     ~Roster();
-}
+};
