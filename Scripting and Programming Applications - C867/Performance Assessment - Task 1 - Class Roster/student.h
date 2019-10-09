@@ -7,7 +7,6 @@ using namespace std;
 
 class Student {
 
-
 private:
 	string studentID;
 	string firstName;
@@ -17,11 +16,9 @@ private:
 	int daysInCourse[3];
 	Degree degree;
 
-
 public:
 Student();
 Student(string ID, string firstName, string lastName, string emailAddress, int age, int* daysCourse, Degree degree);
-
 
 string getID();
 string getFirstName();
@@ -30,7 +27,6 @@ string getEmailAddress();
 int getAge();
 int* getDaysCourse();
 virtual Degree getDegree();
-
 
 void setID(string ID);
 void setFirstName(string firstName);
@@ -41,8 +37,6 @@ void setDaysCourse(int, int, int);
 
 virtual void print();
 
-
 ~Student();
-
 
 };
