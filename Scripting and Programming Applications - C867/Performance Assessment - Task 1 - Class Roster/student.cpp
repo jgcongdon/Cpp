@@ -5,7 +5,6 @@
 #include "degree.h"
 using namespace std;
 
-
 Student::Student()
 {
     this->studentID = "";
@@ -124,5 +123,5 @@ Degree Student::getDegree() {
 
 Student::~Student()
 {
-    
+   
 }
