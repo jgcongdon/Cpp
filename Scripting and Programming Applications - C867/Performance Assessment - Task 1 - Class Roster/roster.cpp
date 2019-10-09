@@ -4,15 +4,12 @@
 #include "softwareStudent.h"
 #include "networkStudent.h"
 #include <string>
-//#include "student.cpp"
 #include <iostream>
 #include <iomanip>
 #include <sstream>
-
 using std::cout;
 using std::cerr;
 using namespace std;
-
 
 Roster::Roster()
 {
@@ -42,28 +39,26 @@ void Roster::add(string ID, string firstName, string lastName, string email, int
 		break;
         }
 	index++;
-	
 }
 
 void Roster::remove(string studentID) {
-    cout << "Removing Student ID: " << studentID;
+	cout << "Removing Student ID: " << studentID << endl;
     for (int i=0; i < numStudents; i++) {
         if (classRosterArray[i] == nullptr) {
-            cout << "Error: matching Student ID was not found.";
+            cout << "Error: matching Student ID was not found." << endl;
         }
         else if (studentID == classRosterArray[i]->getID()){
             classRosterArray[i] = nullptr;
-            cout << "Student ID successfully removed.";
+            cout << "Student ID successfully removed." << endl;
         }
     }
 };
 
 void Roster::printInvalidEmails() {
-    cout << "Displaying list of invalid emails:" << endl;
     for (int i=0; i < numStudents; i++){
         string emailAddress = classRosterArray[i]->getEmailAddress();
         if ((emailAddress.find("@") == string::npos) || (emailAddress.find(" ") != string::npos) || (emailAddress.find(".") == string::npos)) {
-            cout << classRosterArray[i]->getFirstName() << " " << classRosterArray[i]->getLastName() << ": " << classRosterArray[i]->getEmailAddress();
+			cout << classRosterArray[i]->getFirstName() << " " << classRosterArray[i]->getLastName() << ": " << classRosterArray[i]->getEmailAddress() << endl;
         }
     }
 }
@@ -74,13 +69,14 @@ void Roster::printDaysInCourse(string studentID) {
             if (classRosterArray[i]->getID() == studentID) {
                 const int * classes = classRosterArray[i]->getDaysCourse();
                 int average = (classes[0] + classes[1] + classes[2]) / 3;
-                cout << studentID << " average: " << average << "\t";
+                cout << studentID << " average: " << average << "\t" << endl;
             }
         }
     }
 };
 
 void Roster::printByDegreeProgram(int dType){
+	cout << "Printing by Degree program:" << endl;
     for (int i=0; i < numStudents; i++) {
         if (classRosterArray != nullptr) {
             if (classRosterArray[i]->getDegree() == dType) {
@@ -90,10 +86,7 @@ void Roster::printByDegreeProgram(int dType){
     }
 }
 
-
-
 void Roster::printAll(){
-    cout << "Printing Class Roster:" << '\n' << endl;
     for (int i=0; i<5; i++) {
         (*classRosterArray[i]).print();
     }
@@ -103,10 +96,12 @@ void Roster::printAll(){
 Roster::~Roster(){
 };
 
-
 int main () {
-    
-    
+	cout << "Scripting and Programming Applications C867" << endl;
+	cout << "C++" << endl;
+	cout << "001010008" << endl;
+	cout << "Jackson Congdon" << endl << endl;
+
     Roster classRoster;
 	Degree degree;
 
@@ -133,26 +128,14 @@ int main () {
 
 		classRoster.add(col[0], col[1], col[2], col[3], std::stoi(col[4]), std::stoi(col[5]), std::stoi(col[6]), std::stoi(col[7]), degree);
     }
-    
 
-
-
-
-
-
-
-
-
-
-
-
-    cout << "Roster: " << endl;
+	cout << "Roster: " << endl;
     classRoster.printAll();
     cout << endl;
     
     cout << "Invalid Emails: " << endl;
     classRoster.printInvalidEmails();
-    cout << endl;
+	cout << endl << endl;
     
     cout << "Average number of days in three courses for each student: " << endl;
     for (int i=0; i<numStudents; i++) {
@@ -161,9 +144,11 @@ int main () {
     cout << endl;
 
     classRoster.printByDegreeProgram(SOFTWARE);
+	cout << endl;
     classRoster.remove("A3");
+	cout << endl;
     classRoster.remove("A3");
+	cout << endl;
     
 	classRoster.~Roster();
-
 }
